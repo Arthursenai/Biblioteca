@@ -17,7 +17,9 @@ class User {
         this.booksBorrowed.forEach((book) => {
             msg += book.title;
         })
-        return console.log(`O usuário ${user1.name} ${msg}`);
+        console.log(`O usuário ${user1.name} emprestou esses livros: ${msg}`);
+        return msg;
+        ;
     }
 }
 class Library {
@@ -32,9 +34,9 @@ class Library {
         this.users.push(user);
     }
 }
-const book1 = new Book("Joao das nevesBook", "Koala escritor", "300");
-const book2 = new Book("Caçador de Perolas", "Math Costa", "400");
-const book3 = new Book("Caçador de Perolas 2", "Math Costa", "100");
+const book1 = new Book("Joao das nevesBook ", "Koala escritor", "300");
+const book2 = new Book("Caçador de Perolas ", "Math Costa", "400");
+const book3 = new Book("Caçador de Perolas 2 ", "Math Costa", "100");
 const user1 = new User("Joao Victor", "30");
 const user2 = new User("Lucas Moura", "12");
 const user3 = new User("James Silva", "34");
@@ -47,6 +49,8 @@ library.addUser(user1);
 user1.getBookBorrowed(book1);
 user1.getBookBorrowed(book2);
 user1.getBookBorrowed(book3);
+
+
 
 
 // library.addBook(book2);
